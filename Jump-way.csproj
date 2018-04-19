@@ -301,11 +301,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Buttons.cs" />
-    <Compile Include="Assets\Scripts\ScrollObjects.cs" />
-    <Compile Include="Assets\Scripts\SpawnStars.cs" />
-    <Compile Include="Assets\Scripts\StarAnimation.cs" />
-    <Compile Include="Assets\Scripts\TextFade.cs" />
+    <Compile Include="Assets\Scripts\MainScene\Buttons.cs" />
+    <Compile Include="Assets\Scripts\MainScene\DetectClicks.cs" />
+    <Compile Include="Assets\Scripts\MainScene\ScrollObjects.cs" />
+    <Compile Include="Assets\Scripts\MainScene\SpawnStars.cs" />
+    <Compile Include="Assets\Scripts\MainScene\StarAnimation.cs" />
+    <Compile Include="Assets\Scripts\MainScene\TextFade.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="C:\ProgramData\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.2\Editor\Resources\Styles\Main_Dark.uss" />
