@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameArrangement : MonoBehaviour {
 
     public GameObject[] cubes;
-    public GameObject buttons, m_cube;
+    public GameObject buttons, m_cube, spawn_blocks;
     public Text playTxt, gameName; // текстовые поля
     public Light dirLight, dirLight_2;
     public Animation cubes_anim, block;
@@ -52,6 +52,7 @@ public class GameArrangement : MonoBehaviour {
             yield return new WaitForSeconds(0.5f);
             cubes[i].GetComponent<FallCube>().enabled = true;
         }
+        spawn_blocks.GetComponent<SpawnBlocks>().enabled = true; //включаем компонет SpawnBlocks после того как все кубики удалятся со сцены
     }
     IEnumerator cubeToBlock()
     {
