@@ -52,12 +52,15 @@ public class GameArrangement : MonoBehaviour {
             yield return new WaitForSeconds(0.5f);
             cubes[i].GetComponent<FallCube>().enabled = true;
         }
-        spawn_blocks.GetComponent<SpawnBlocks>().enabled = true; //включаем компонет SpawnBlocks после того как все кубики удалятся со сцены
+        spawn_blocks.GetComponent<SpawnBlocks>().enabled = true; // включаем компонет SpawnBlocks после того как все кубики удалятся со сцены
     }
     IEnumerator cubeToBlock()
     {
         yield return new WaitForSeconds(m_cube.GetComponent<Animation>().clip.length);
         block.Play();
+
+        m_cube.AddComponent<Rigidbody>(); // после всех анимаций добавляем галвному кубику компонет Rigidbody
+        m_cube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY; // запрещаем кубику крутиться по оси y
     }
 }﻿
 
