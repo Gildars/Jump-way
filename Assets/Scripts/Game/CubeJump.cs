@@ -112,10 +112,10 @@ public class CubeJump : MonoBehaviour
     IEnumerator checkCubesPos() // отслеживаем попали ли мы на другую платформу или остались на той же платформе 
     {
         yield return new WaitForSeconds(1f);
-        if(false) // не работает, потом исправлю  (yPosCube == mainCube.transform.localPosition.y
+        if(yPosCube == mainCube.transform.localPosition.y) // не работает, потом исправлю  (yPosCube == mainCube.transform.localPosition.y
         {
-            print("Player Lose");
-            lose = true;
+            print("stop");
+            //lose = true;
             nextBlock = false;
         }
         else
